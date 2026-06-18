@@ -1,0 +1,18 @@
+PORTAFOLIO ESCOLAR - PROGRAMACIÓN WEB
+
+Alumno: Jorge Abdiel Kataura Quintana
+Matrícula: 24041170
+Grupo: 03 ISOF
+
+Proyecto desarrollado con:
+
+Node.js
+Express
+MongoDB Atlas
+Render
+
+Enlace público del proyecto:
+
+https://webproject-vv87.onrender.com
+
+El proyecto se encuentra desplegado y funcionando en internet. También se incluyen los archivos fuente correspondientes al frontend, backend y los datos utilizados para la base de datos.
