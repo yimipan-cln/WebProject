@@ -9,8 +9,12 @@ fetch("https://webproject-vv87.onrender.com/tareas")
         const li = document.createElement("li");
 
         li.innerHTML = `
-            ${tarea.titulo}
-            <a href="${tarea.url}" target="_blank">
+            <div class="tarea-info">
+                <span class="folio">Folio #${tarea.id}</span>
+                <span class="titulo">${tarea.titulo}</span>
+            </div>
+
+            <a href="${tarea.url}" target="_blank" class="btn">
                 Abrir tarea
             </a>
         `;
@@ -19,7 +23,4 @@ fetch("https://webproject-vv87.onrender.com/tareas")
 
     });
 
-})
-.catch(error => {
-    console.error("Error:", error);
 });
