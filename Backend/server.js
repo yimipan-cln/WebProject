@@ -3,6 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const path = require("path");
 
 const Tarea = require("./models/Tarea");
 
@@ -10,6 +11,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "../Frontend")));
 
 // Conexión a MongoDB
 mongoose.connect(process.env.MONGODB_URI)
@@ -22,7 +24,9 @@ mongoose.connect(process.env.MONGODB_URI)
 
 // Ruta principal
 app.get("/", (req, res) => {
-    res.send("API funcionando correctamente");
+    res.sendFile(
+        path.join(__dirname, "../Frontend/index.html")
+    );
 });
 
 // Endpoint
